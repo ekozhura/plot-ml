@@ -1,0 +1,4 @@
+(executable
+  (name main)
+  (public_name plot-ml)
+  (libraries glfw-ocaml plplot cairo2 lib))

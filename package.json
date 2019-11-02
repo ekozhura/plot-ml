@@ -1,0 +1,26 @@
+{
+  "name": "plot-ml",
+  "version": "0.1.0",
+  "esy": {
+    "build": "dune build -p #{self.name}",
+    "release": {
+      "bin": "hello",
+      "includePackages": [
+        "root",
+        "@opam/camomile"
+      ]
+    }
+  },
+  "dependencies": {
+    "@opam/dune": "*",
+    "@opam/plplot": "~5.11.0",
+    "@opam/cairo2": "~0.6.1",
+    "@opam/glfw-ocaml": "~3.2.1",
+    "esy-glfw": "^3.2.1008",
+    "ocaml": "~4.9.0"
+  },
+  "devDependencies": {
+    "@opam/merlin": "^3.3.2",
+    "ocaml": "~4.8.0"
+  }
+}
