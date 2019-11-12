@@ -3,6 +3,8 @@ open Cairo
 open GLFW
 open GL
 
+(* open Reconciler *)
+
 (* external plset_cairo_context : Cairo.context -> unit = "ml_set_plplot_cairo_context" *)
 
 let simple_example context =
@@ -107,8 +109,6 @@ let expose drawing_area cr =
 
 let _ = GtkMain.Main.init ()
 
-let names = ["Andrew", "Joe", "Samantha", "Jonathan"]
-
 let main () =
   let window = GWindow.window ~width:800 ~height:600 ~title:"Simple lablgtk program" () in
   let vbox = GPack.vbox ~packing:window#add () in
@@ -117,9 +117,9 @@ let main () =
   let accel_group = factory#accel_group in
   let file_menu = factory#add_submenu "File" in
   let factory = new GMenu.factory file_menu ~accel_group in
-  factory#add_separator ();
-  factory#add_item "Quit" ~key:_Q ~callback:Main.quit;
-  window#connect#destroy ~callback:Main.quit;
+  let _ = factory#add_separator () in
+  let _ = factory#add_item "Quit" ~key:_Q ~callback:Main.quit in
+  let _ = window#connect#destroy ~callback:Main.quit in
   window#show ();
   let d = GMisc.drawing_area ~packing:vbox#add () in
   ignore(d#misc#connect#draw ~callback:(expose d));
