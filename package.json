@@ -18,11 +18,15 @@
     "@opam/glfw-ocaml": "~3.2.1",
     "@opam/glMLite": "*",
     "@opam/lablgtk3": "*",
+    "brisk-reconciler": "*",
     "esy-glfw": "^3.2.1008",
     "ocaml": "~4.9.0"
   },
   "devDependencies": {
     "@opam/merlin": "^3.3.2",
     "ocaml": "~4.8.0"
+  },
+  "resolutions": {
+    "brisk-reconciler": "briskml/brisk-reconciler#7b48451"
   }
 }

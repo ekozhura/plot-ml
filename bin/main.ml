@@ -107,6 +107,8 @@ let expose drawing_area cr =
 
 let _ = GtkMain.Main.init ()
 
+let names = ["Andrew", "Joe", "Samantha", "Jonathan"]
+
 let main () =
   let window = GWindow.window ~width:800 ~height:600 ~title:"Simple lablgtk program" () in
   let vbox = GPack.vbox ~packing:window#add () in
